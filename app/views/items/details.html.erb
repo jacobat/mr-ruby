@@ -1,0 +1,9 @@
+<h1><%= @item.name %></h1>
+
+Id: <%= @item.id %><br />
+Count: <%= @item.current_count %><br>
+
+<%= link_to "Rename", rename_item_path(@item.id) %><br>
+<%= link_to "Check in", check_in_item_path(@item.id) %><br>
+<%= link_to "Remove", remove_item_path(@item.id) %><br>
+<%= link_to "Deactivate", deactivate_item_path(@item.id, version: @item.version), method: :put %><br>

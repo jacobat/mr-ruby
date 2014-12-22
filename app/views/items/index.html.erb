@@ -1,0 +1,8 @@
+<h1>Items</h1>
+<ul>
+<% @items.each do |item| %>
+  <li><%= link_to item.name, details_item_path(item.id) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Add', '/items/new' %>

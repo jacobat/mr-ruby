@@ -1,0 +1,8 @@
+<h1>Remove</h1>
+
+<%= form_tag(remove_item_path, method: :put) do %>
+  <%= label_tag('Count') %>
+  <%= text_field_tag('count') %>
+  <%= hidden_field_tag('version', @item.version) %>
+<% end %>
+

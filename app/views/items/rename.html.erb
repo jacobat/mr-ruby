@@ -1,0 +1,8 @@
+<h1>Rename item</h1>
+
+<%= form_tag(perform_rename_item_path, method: :put) do %>
+  <%= label_tag('Name') %>
+  <%= text_field_tag('new_name') %>
+  <%= hidden_field_tag('version', @item.version) %>
+<% end %>
+

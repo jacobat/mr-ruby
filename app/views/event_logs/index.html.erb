@@ -1,0 +1,6 @@
+<h1>EventLogs</h1>
+<ul>
+  <% @root_ids.each do |id| %>
+    <li><%= link_to(id, event_log_path(id)) %></li>
+  <% end %>
+</ul>

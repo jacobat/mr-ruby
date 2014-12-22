@@ -1,0 +1,7 @@
+require 'simple_cqrs/event_store'
+require 'simple_cqrs/events'
+require 'simple_cqrs/commands'
+require 'simple_cqrs/command_handlers'
+require 'simple_cqrs/domain'
+require 'simple_cqrs/fake_bus'
+require 'simple_cqrs/read_model'

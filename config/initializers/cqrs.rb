@@ -1,3 +1,5 @@
+require 'simple_cqrs'
+
 $bus = SimpleCQRS::FakeBus.new
 $db = SimpleCQRS::BullShitDatabase.new
 

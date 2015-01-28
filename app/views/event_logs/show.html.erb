@@ -1,3 +1,8 @@
 <% @events.each do |event| %>
-  <pre><%= event.inspect %></pre>
+  <strong><%= event.class.name.demodulize %></strong>
+  <dl>
+  <% event.instance_variables.each do |var| %>
+    <dt><%= var %></dt><dd><%= event.instance_variable_get(var) %></dd>
+<% end %>
+  </dl>
 <% end %>

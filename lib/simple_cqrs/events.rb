@@ -1,12 +1,17 @@
 module SimpleCQRS
   class Event
     attr_accessor :version
+
+    def initialize
+      @time = Time.now
+    end
   end
 
   class InventoryItemDeactivated < Event
     attr_reader :id
 
     def initialize(id)
+      super()
       @id = id
     end
   end
@@ -15,6 +20,7 @@ module SimpleCQRS
     attr_reader :id, :name
 
     def initialize(id, name)
+      super()
       @id = id
       @name = name
     end
@@ -24,6 +30,7 @@ module SimpleCQRS
     attr_reader :id, :new_name
 
     def initialize(id, new_name)
+      super()
       @id = id
       @new_name = new_name
     end
@@ -33,6 +40,7 @@ module SimpleCQRS
     attr_reader :id, :count
 
     def initialize(id, count)
+      super()
       @id = id
       @count = count
     end
@@ -42,6 +50,7 @@ module SimpleCQRS
     attr_reader :id, :count
 
     def initialize(id, count)
+      super()
       @id = id
       @count = count
     end
